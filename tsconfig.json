@@ -1,0 +1,19 @@
+{
+	"compilerOptions": {
+		"target": "es5",
+		"module": "commonjs",
+		"noImplicitAny": true,
+		"removeComments": true,
+		"preserveConstEnums": true,
+		"sourceMap": false,
+		"declaration": true,
+		"strict": true,
+		"jsx": "react",
+		"lib": ["es2015", "dom"],
+		"outDir": "./dist"
+	},
+	"include": [
+		"./src/**/*.ts"
+	],
+	"compileOnSave": false
+}
