@@ -10,7 +10,7 @@
 		"strict": true,
 		"jsx": "react",
 		"lib": ["es2015", "dom"],
-		"outDir": "./dist"
+		"outDir": "./lib"
 	},
 	"include": [
 		"./src/**/*.ts"
