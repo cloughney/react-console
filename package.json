@@ -1,12 +1,13 @@
 {
   "name": "react-console",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A command line component written in React.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf lib && tsc",
+    "start": "rimraf lib && tsc -w && karma start",
+    "test": "npm run build && karma start --single-run"
   },
   "repository": {
     "type": "git",
@@ -26,9 +27,19 @@
     "react": "^15.6.1"
   },
   "devDependencies": {
+    "@types/enzyme": "^2.8.7",
+    "@types/jasmine": "^2.5.54",
     "@types/react": "^16.0.5",
+    "enzyme": "^2.9.1",
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.2.2",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.0",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-typescript-preprocessor": "^0.3.1",
+    "rimraf": "^2.6.2",
     "typescript": "^2.5.2"
   }
 }
