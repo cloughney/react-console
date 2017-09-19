@@ -1,4 +1,5 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = function (config) {
     config.set({
@@ -17,6 +18,7 @@ module.exports = function (config) {
         exclude: [],
 
         preprocessors: {
+            '**/*.js': ['webpack'],
             '**/*.{ts,tsx}': ['typescript']
         },
 
@@ -27,6 +29,11 @@ module.exports = function (config) {
                 //inlineSources: true
             }
         },
+
+        webpack: {
+            
+        },
+        webpackServer: { noInfo: true },
 
         reporters: ['progress'],
 
